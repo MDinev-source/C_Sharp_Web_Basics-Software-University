@@ -2784,11 +2784,12 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5001,7 +5002,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -6046,27 +6047,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mariela\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\Apps\\SharedTrip\\SharedTrip.csproj",
+      "projectUniqueName": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\Apps\\SharedTrip\\SharedTrip.csproj",
       "projectName": "SharedTrip",
-      "projectPath": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\Apps\\SharedTrip\\SharedTrip.csproj",
-      "packagesPath": "C:\\Users\\Mariela\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\Apps\\SharedTrip\\obj\\",
+      "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\Apps\\SharedTrip\\SharedTrip.csproj",
+      "packagesPath": "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\Apps\\SharedTrip\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mariela\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Milko Qni Emi PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6077,12 +6075,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\SUS.HTTP\\SUS.HTTP.csproj": {
-              "projectPath": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\SUS.HTTP\\SUS.HTTP.csproj"
+            "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj": {
+              "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj"
             },
-            "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {
-              "projectPath": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\SUS.MvcFramework\\SUS.MvcFramework.csproj"
+            "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {
+              "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj"
             }
           }
         }
@@ -6095,6 +6094,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -6126,7 +6126,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

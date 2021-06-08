@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3/vqzdSwpwB8qCnn3Y/xD+w68JIVNHdtrk0z4Dk7UYhfho8rT5glkrtVhtKfzYBJ5NRAuWSLIon7kTjhzwM+Xw==",
+  "dgSpecHash": "NWjXZIVBSa1k1OEP5WiOWwTlER5Sgr/AXXUPC9a/Cg4wMXo2iJj6t+L54/BFKGLPeTmZBuQ0p73Q1aztSUFJeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mariela\\Desktop\\Exam-Preparation\\SUS.HTTP\\SUS.HTTP.csproj",
+  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
