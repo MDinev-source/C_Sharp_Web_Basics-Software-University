@@ -10,7 +10,12 @@
     {
         public void Configure(List<Route> routeTable)
         {
-            new ApplicationDbContext().Database.Migrate();
+            //new ApplicationDbContext().Database.Migrate();
+
+            using (var db = new ApplicationDbContext())
+            {
+                db.Database.EnsureCreated();
+            }
         }
 
         public void ConfigureServices(IServiceCollection serviceCollection)

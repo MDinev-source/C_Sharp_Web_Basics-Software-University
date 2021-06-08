@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4BOlY8O/wwoCl4Kg7J2iyx63x2InRduLqY/stQbvTBQoJXjjPyq286H67oUa4yd+tCjTNaVAiBhKURM3yS/N3Q==",
+  "dgSpecHash": "8D5VrpbAgTH1I7datj+5kOivpRyh455KC5TgYkqd9qU/MZ0guAHEm5gcD0GPPTDpLiaZYgqf35Xy9811vDvJiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework.Tests\\SUS.MvcFramework.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework.Tests\\SUS.MvcFramework.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",

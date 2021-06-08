@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {}
+    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj": {
+    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj",
+        "projectUniqueName": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj",
         "projectName": "SUS.HTTP",
-        "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj",
+        "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj",
         "packagesPath": "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\obj\\",
+        "outputPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {
+    "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
+        "projectUniqueName": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
         "projectName": "SUS.MvcFramework",
-        "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
+        "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
         "packagesPath": "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\obj\\",
+        "outputPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -91,8 +91,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj": {
-                "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj"
+              "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj": {
+                "projectPath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.HTTP\\SUS.HTTP.csproj"
               }
             }
           }

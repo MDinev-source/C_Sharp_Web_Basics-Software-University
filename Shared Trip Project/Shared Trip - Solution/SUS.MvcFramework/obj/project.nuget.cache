@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9/ZOe4/gJRmICtver2GDap2POK0L5mxDpyW81VgEgxKBz+WBgTZZDNgTNx9RU4pUV3nNUDQ2dA+jbEIpmYMjw==",
+  "dgSpecHash": "UZfHThkOV/+8dxbMRWSKuU7ev4yQQTkKbedbQhb3syR50rtWaDG7B0f8z+OCHutw8r1cefeMVYwy65bXdvW1KQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip - 16 Feb 2020\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
+  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Shared Trip Project\\Shared Trip - Solution\\SUS.MvcFramework\\SUS.MvcFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.common\\3.7.0\\microsoft.codeanalysis.common.3.7.0.nupkg.sha512",
