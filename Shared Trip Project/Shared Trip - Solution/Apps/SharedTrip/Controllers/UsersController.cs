@@ -31,7 +31,7 @@
 
             this.SignIn(userId);
 
-            return this.Redirect("/Traips/All");
+            return this.Redirect("/Trips/All");
         }
         public HttpResponse Register()
         {
