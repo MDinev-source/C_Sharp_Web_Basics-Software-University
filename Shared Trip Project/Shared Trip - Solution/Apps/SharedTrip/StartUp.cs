@@ -1,6 +1,5 @@
 ﻿namespace SharedTrip
 {
-    using Microsoft.EntityFrameworkCore;
     using SharedTrip.Data;
     using SharedTrip.Services;
     using SUS.HTTP;
