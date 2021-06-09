@@ -66,9 +66,25 @@
                 return this.Error("Passwords do not match");
             }
 
+            if (!this.usersService.IsEmailAvailable(input.Email))
+            {
+                return this.Error("Email already taken.");
+            }
+
+            if (!this.usersService.IsUsernameAvailable(input.Username))
+            {
+                return this.Error("Username already taken.");
+            }
+
             this.usersService.Create(input.Username, input.Email, input.Password);
 
             return this.Redirect("/Users/Login");
+        }
+
+        public HttpResponse Logout()
+        {
+            this.SignOut();
+            return this.Redirect("/");
         }
     }
 }

@@ -35,7 +35,7 @@
         {
             var hashPassword = ComputeHash(password);
 
-            var user = this.db.Users.FirstOrDefault(x => x.Username == username && x.Password == password);
+            var user = this.db.Users.FirstOrDefault(x => x.Username == username && x.Password == hashPassword);
 
             return user?.Id;
         }
