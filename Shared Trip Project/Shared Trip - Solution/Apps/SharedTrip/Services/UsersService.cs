@@ -2,6 +2,7 @@
 {
     using SharedTrip.Data;
     using System;
+    using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
 
@@ -14,12 +15,20 @@
         }
         public void Create(string username, string email, string password)
         {
-            throw new NotImplementedException();
+            var user = new User
+            {
+                Email = email,
+                Username = username,
+                Password = ComputeHash(password)
+            };
+
+            this.db.Users.Add(user);
+            this.db.SaveChanges();
         }
 
         public bool IsEmailAvailable(string email)
         {
-            throw new NotImplementedException();
+            return !this.db.Users.Any(x => x.Email == email);
         }
 
         public bool IsLoginValid(string username, string password)
