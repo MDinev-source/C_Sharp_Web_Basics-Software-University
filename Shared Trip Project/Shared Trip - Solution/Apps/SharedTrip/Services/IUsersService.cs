@@ -2,7 +2,7 @@
 {
     public interface IUsersService
     {
-        bool IsLoginValid(string username, string password);
+        string GetUserId(string username, string password);
 
         void Create(string username, string email, string password);
 

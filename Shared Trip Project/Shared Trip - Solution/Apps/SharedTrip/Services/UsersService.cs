@@ -31,9 +31,13 @@
             return !this.db.Users.Any(x => x.Email == email);
         }
 
-        public bool IsLoginValid(string username, string password)
+        public string GetUserId(string username, string password)
         {
-            throw new NotImplementedException();
+            var hashPassword = ComputeHash(password);
+
+            var user = this.db.Users.FirstOrDefault(x => x.Username == username && x.Password == password);
+
+            return user?.Id;
         }
 
         public bool IsUsernameAvailable(string username)
