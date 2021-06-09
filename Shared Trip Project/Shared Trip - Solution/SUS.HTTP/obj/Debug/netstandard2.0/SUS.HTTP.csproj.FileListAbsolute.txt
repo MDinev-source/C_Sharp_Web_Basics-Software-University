@@ -6,3 +6,4 @@ C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip Project\Shared Trip - Solution\SUS.HTTP\obj\Debug\netstandard2.0\SUS.HTTP.csproj.CoreCompileInputs.cache
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip Project\Shared Trip - Solution\SUS.HTTP\obj\Debug\netstandard2.0\SUS.HTTP.dll
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip Project\Shared Trip - Solution\SUS.HTTP\obj\Debug\netstandard2.0\SUS.HTTP.pdb
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip Project\Shared Trip - Solution\SUS.HTTP\obj\Debug\netstandard2.0\SUS.HTTP.csprojAssemblyReference.cache
