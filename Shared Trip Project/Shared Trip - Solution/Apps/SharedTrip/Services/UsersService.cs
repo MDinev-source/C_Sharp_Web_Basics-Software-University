@@ -38,7 +38,7 @@
 
         public bool IsUsernameAvailable(string username)
         {
-            throw new NotImplementedException();
+            return !this.db.Users.Any(x => x.Username == username);
         }
 
         private static string ComputeHash(string input)
