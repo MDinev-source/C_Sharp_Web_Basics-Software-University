@@ -14,6 +14,28 @@
         {
             this.db = db;
         }
+
+        public bool AddUserToTrip(string userId, string tripId)
+        {
+            var userInTrip = this.db.UserTrips.Any(x => x.UserId == userId && x.TripId == tripId);
+
+            if (userInTrip)
+            {
+                return false;
+            }
+
+            var userTrip = new UserTrip
+            {
+                TripId = tripId,
+                UserId = userId
+            };
+
+            this.db.UserTrips.Add(userTrip);
+            this.db.SaveChanges();
+
+            return true;
+        }
+
         public void Create(AddTripInputModel trip)
         {
             var dbTrip = new Trip
@@ -63,6 +85,22 @@
                 .FirstOrDefault();
 
             return trip;
+        }
+
+        public bool HasAvailableSeats( string tripId)
+        {
+            var trip = this.db.Trips.Where(x => x.Id == tripId)
+                     .Select(x => new { x.Seats, TakenSeats = x.UserTrips.Count() })
+                     .FirstOrDefault();
+
+            var availableSeats = trip.Seats - trip.TakenSeats;
+
+            if (availableSeats <= 0)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
