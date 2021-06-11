@@ -13,6 +13,7 @@
             base.OnConfiguring(optionsBuilder);
 
             optionsBuilder.UseSqlServer(DatabaseConfiguration.ConnectionString);
+         
         }
     }
 }

@@ -7,7 +7,7 @@
     using System.Security.Cryptography;
     using System.Text;
 
-    public class UsersService : IUsersSevice
+    public class UsersService : IUsersService
     {
         private readonly AndreysDbContext db;
         public UsersService(AndreysDbContext db)
@@ -61,10 +61,9 @@
             var crypt = new SHA256Managed();
             var hash = new StringBuilder();
             byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            foreach (byte bt in crypto)
+            foreach (byte theByte in crypto)
             {
-                hash.Append(bt.ToString("x2"));
+                hash.Append(theByte.ToString("x2"));
             }
 
             return hash.ToString();

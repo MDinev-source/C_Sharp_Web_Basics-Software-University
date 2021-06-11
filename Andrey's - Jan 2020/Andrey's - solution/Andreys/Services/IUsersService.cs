@@ -1,6 +1,6 @@
 ﻿namespace Andreys.Services
 {
-    public interface IUsersSevice
+    public interface IUsersService
     {
         string GetUserId(string username, string password);
 
