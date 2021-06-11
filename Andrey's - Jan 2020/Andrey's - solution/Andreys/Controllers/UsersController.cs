@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Andreys.Controllers
+﻿namespace Andreys.Controllers
 {
-    class UsersController
+    using SIS.HTTP;
+    using SIS.MvcFramework;
+    public class UsersController : Controller
     {
+        public HttpResponse Login()
+        {
+            return this.View();
+        }
     }
 }
