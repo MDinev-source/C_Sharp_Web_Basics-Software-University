@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IjBTAdYza6VB5LUElRW+rNFtVtfEayLrVTHs8ThdZu8BGqCyuGhkjuHxYHyYQQ/cjZACdAHgZVprMHFCphYwqg==",
+  "dgSpecHash": "kEOE6SQMpUoDI51095fDaRJUe7OEuH2TZ4nJyzKRjocEC+xHzXueEWAXXVbjPZR2w/v8ev2s6i8UPDnFTIQJGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Andrey's - Jan 2020\\Andrey's - solution\\Andreys\\Andreys.csproj",
   "expectedPackageFiles": [
@@ -9,11 +9,12 @@
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.6\\microsoft.codeanalysis.analyzers.2.9.6.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.common\\3.4.0\\microsoft.codeanalysis.common.3.4.0.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.4.0\\microsoft.codeanalysis.csharp.3.4.0.nupkg.sha512",
-    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19269.1\\microsoft.data.sqlclient.1.0.19269.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.1\\microsoft.entityframeworkcore.3.1.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.1\\microsoft.entityframeworkcore.abstractions.3.1.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.1\\microsoft.entityframeworkcore.analyzers.3.1.1.nupkg.sha512",
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.1\\microsoft.entityframeworkcore.design.3.1.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.1\\microsoft.entityframeworkcore.relational.3.1.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.1\\microsoft.entityframeworkcore.sqlserver.3.1.1.nupkg.sha512",
     "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.1\\microsoft.extensions.caching.abstractions.3.1.1.nupkg.sha512",

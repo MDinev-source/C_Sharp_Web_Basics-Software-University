@@ -87,3 +87,4 @@ C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Andrey's - Jan 2020\Andrey's - solution\Andreys\obj\Debug\netcoreapp3.1\Andreys.dll
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Andrey's - Jan 2020\Andrey's - solution\Andreys\obj\Debug\netcoreapp3.1\Andreys.pdb
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Andrey's - Jan 2020\Andrey's - solution\Andreys\obj\Debug\netcoreapp3.1\Andreys.genruntimeconfig.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Andrey's - Jan 2020\Andrey's - solution\Andreys\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
