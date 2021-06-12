@@ -3,7 +3,7 @@
     using Andreys.ViewModels.Products;
     using System.Collections.Generic;
 
-    interface IProductService
+    public interface IProductsService
     {
         int Add(string name, string description, string imageUrl, decimal price, string category, string gendetr);
         IEnumerable<ProductsHomeViewModel> GetAll();
