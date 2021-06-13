@@ -5,7 +5,7 @@
 
     public interface IProductsService
     {
-        int Add(string name, string description, string imageUrl, decimal price, string category, string gendetr);
+        int Add(string name, string description, string imageUrl, decimal price, string category, string gender);
         IEnumerable<ProductsHomeViewModel> GetAll();
         ProductDetailsViewModel GetProduct(int id);
         void DeleteById(int id);
