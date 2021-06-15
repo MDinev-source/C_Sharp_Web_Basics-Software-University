@@ -14,13 +14,11 @@ namespace SIS.MvcFramework
         public string GetHtml(string templateHtml, object model, string user)
         {
             var methodCode = PrepareCSharpCode(templateHtml);
-
-            var modelType = model?.GetType() ?? typeof(object);
-            var typeName = modelType.FullName;
-
-            if (modelType.IsGenericType)
+            var typeName = model?.GetType().FullName ?? "object";
+            if (model?.GetType().IsGenericType == true) // null/true/false bool?
             {
-                typeName = GetGenericTypeFullName(modelType);
+                typeName = model.GetType().Name.Replace("`1", string.Empty) + "<"
+                    + model.GetType().GenericTypeArguments.First().Name + ">";
             }
 
             var code = @$"using System;
@@ -48,26 +46,6 @@ namespace AppViewNamespace
             IView view = GetInstanceFromCode(code, model);
             string html = view.GetHtml(model, user);
             return html;
-        }
-
-        private string GetGenericTypeFullName(Type modelType)
-        {
-            var argumentCountBeginning = modelType.Name.LastIndexOf('`');
-            var genericModelTypeName = modelType.Name.Substring(0, argumentCountBeginning);
-            var genericTypeFullName = $"{modelType.Namespace}.{genericModelTypeName}";
-            var genericTypeArguments = modelType.GenericTypeArguments.Select(GetGenericTypeArgumentFullName);
-            var modelTypeName = $"{genericTypeFullName}<{string.Join(", ", genericTypeArguments)}>";
-            return modelTypeName;
-        }
-
-        private string GetGenericTypeArgumentFullName(Type genericTypeArgument)
-        {
-            if (genericTypeArgument.IsGenericType)
-            {
-                return GetGenericTypeFullName(genericTypeArgument);
-            }
-
-            return genericTypeArgument.FullName;
         }
 
         private IView GetInstanceFromCode(string code, object model)
@@ -116,7 +94,7 @@ namespace AppViewNamespace
             StringBuilder cSharpCode = new StringBuilder();
             StringReader reader = new StringReader(templateHtml);
             string line;
-            while ((line = reader.ReadLine()) != null)
+            while((line = reader.ReadLine()) != null)
             {
                 if (line.TrimStart().StartsWith("{")
                     || line.TrimStart().StartsWith("}"))

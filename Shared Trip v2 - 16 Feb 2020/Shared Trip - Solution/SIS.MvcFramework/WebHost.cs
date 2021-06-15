@@ -81,10 +81,14 @@ namespace SIS.MvcFramework
             var actionParameters = actionMethod.GetParameters();
             foreach (var parameter in actionParameters)
             {
-                var value = Convert.ChangeType(GetValueFromRequest(request, parameter.Name), parameter.ParameterType);
-                if (value == null && parameter.ParameterType != typeof(string))
+                object value = 
+                    Convert.ChangeType(
+                        GetValueFromRequest(request, parameter.Name),
+                        parameter.ParameterType);
+
+                if (value == null)
                 {
-                    var parameterValue = Activator.CreateInstance(parameter.ParameterType);
+                    var parameterValue = serviceCollection.CreateInstance(parameter.ParameterType);
                     foreach (var property in parameter.ParameterType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
                     {
                         var propertyValue = GetValueFromRequest(request, property.Name);
