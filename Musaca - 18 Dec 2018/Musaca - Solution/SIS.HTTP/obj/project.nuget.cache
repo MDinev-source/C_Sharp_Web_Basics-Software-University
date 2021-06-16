@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3paNoj2fpbWzw6MfXjSugGCI/D7RdxmnxOda59MCojyOG83k9RM99vOgq4jkVEiWPm/lxsFrX66h0lUvXwAiMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Milko Qni Emi PC\\OneDrive\\Documents\\GitHub\\C_Sharp_Web_Basics-Software-University\\Musaca - 18 Dec 2018\\Musaca - Solution\\SIS.HTTP\\SIS.HTTP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Milko Qni Emi PC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
