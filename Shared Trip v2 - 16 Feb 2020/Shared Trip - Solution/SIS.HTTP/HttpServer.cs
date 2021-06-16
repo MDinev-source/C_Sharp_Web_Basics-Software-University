@@ -108,6 +108,11 @@
                             { HttpOnly = true, MaxAge = 30*3600, });
                 }
 
+                if (response.Body == null)
+                {
+                    throw new ArgumentNullException(nameof(response.Body));
+                }
+
                 byte[] responseBytes = Encoding.UTF8.GetBytes(response.ToString());
                 await networkStream.WriteAsync(responseBytes, 0, responseBytes.Length);
                 await networkStream.WriteAsync(response.Body, 0, response.Body.Length);
