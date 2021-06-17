@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using BattleCards.Data;
+    using BattleCards.Services;
     using SIS.HTTP;
     using SIS.MvcFramework;
 
@@ -17,7 +18,7 @@
 
         public void ConfigureServices(IServiceCollection serviceCollection)
         {
-
+            serviceCollection.Add<IUsersService, UsersService>();
         }
     }
 }

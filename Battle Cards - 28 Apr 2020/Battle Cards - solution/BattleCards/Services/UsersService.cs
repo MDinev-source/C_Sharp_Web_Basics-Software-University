@@ -6,11 +6,11 @@
     using System.Security.Cryptography;
     using System.Text;
 
-    public class UserService : IUserService
+    public class UsersService : IUsersService
     {
         private readonly ApplicationDbContext db;
 
-        public UserService(ApplicationDbContext db)
+        public UsersService(ApplicationDbContext db)
         {
             this.db = db;
         }

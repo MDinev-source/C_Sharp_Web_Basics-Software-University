@@ -1,6 +1,6 @@
 ﻿namespace BattleCards.Services
 {
-    public interface IUserService
+    public interface IUsersService
     {
         string GetUserId(string username, string password);
         void Register(string username, string email, string password);
