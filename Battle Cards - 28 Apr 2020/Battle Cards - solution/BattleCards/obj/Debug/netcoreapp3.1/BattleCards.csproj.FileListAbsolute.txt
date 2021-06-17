@@ -1,0 +1,4 @@
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.csprojAssemblyReference.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.AssemblyInfoInputs.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.AssemblyInfo.cs
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.csproj.CoreCompileInputs.cache
