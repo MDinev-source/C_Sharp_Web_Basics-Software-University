@@ -26,6 +26,10 @@
 
         public int Health { get; set; }
 
+        [Required]
+        [MaxLength(200)]
+        public string Description { get; set; }
+
         public ICollection<UserCard> UserCards { get; set; }
     }
 }
