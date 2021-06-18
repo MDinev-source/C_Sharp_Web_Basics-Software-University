@@ -54,7 +54,7 @@
         {
             if (!this.IsUserLoggedIn())
             {
-                return this.Redirect("/Users/Login");
+                return this.Redirect("/User/Login");
             }
 
             return this.View(this.tripsService.GetAll(), "All");

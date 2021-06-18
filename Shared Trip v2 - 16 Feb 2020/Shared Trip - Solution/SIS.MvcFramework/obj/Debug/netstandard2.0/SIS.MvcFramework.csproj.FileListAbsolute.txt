@@ -1,0 +1,12 @@
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.deps.json
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.dll
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.MvcFramework.pdb
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.HTTP.dll
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\bin\Debug\netstandard2.0\SIS.HTTP.pdb
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.csprojAssemblyReference.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.AssemblyInfoInputs.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.AssemblyInfo.cs
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.csproj.CoreCompileInputs.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.csproj.CopyComplete
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.dll
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Shared Trip v2 - 16 Feb 2020\Shared Trip - Solution\SIS.MvcFramework\obj\Debug\netstandard2.0\SIS.MvcFramework.pdb

@@ -3,14 +3,6 @@ C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.AssemblyInfo.cs
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.csproj.CoreCompileInputs.cache
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\BattleCards.exe
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\Add.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\All.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\Collection.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Home\Index.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Shared\Error.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Shared\_Layout.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Users\Login.html
-C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Users\Register.html
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\wwwroot\css\bootstrap.min.css
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\wwwroot\css\custom.css
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\wwwroot\js\bootstrap.bundle.min.js
@@ -87,3 +79,11 @@ C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.dll
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.pdb
 C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\obj\Debug\netcoreapp3.1\BattleCards.genruntimeconfig.cache
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\Add.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\All.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Cards\Collection.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Home\Index.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Shared\Error.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Shared\_Layout.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Users\Login.cshtml
+C:\Users\Milko Qni Emi PC\OneDrive\Documents\GitHub\C_Sharp_Web_Basics-Software-University\Battle Cards - 28 Apr 2020\Battle Cards - solution\BattleCards\bin\Debug\netcoreapp3.1\Views\Users\Register.cshtml
