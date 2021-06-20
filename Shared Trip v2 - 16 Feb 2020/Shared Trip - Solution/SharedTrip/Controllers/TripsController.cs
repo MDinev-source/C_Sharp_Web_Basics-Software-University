@@ -33,17 +33,17 @@
 
             if (string.IsNullOrWhiteSpace(trip.StartPoint) || string.IsNullOrWhiteSpace(trip.EndPoint))
             {
-                return this.Redirect("/Trips/All");
+                return this.Redirect("/Trips/Add");
             }
 
             if (trip.Seats < 2 || trip.Seats > 6)
             {
-                return this.Redirect("/Trips/All");
+                return this.Redirect("/Trips/Add");
             }
 
             if (trip.Description.Length > 80)
             {
-                return this.Redirect("/Trips/All");
+                return this.Redirect("/Trips/Add");
             }
 
             this.tripsService.Add(trip.StartPoint, trip.EndPoint, trip.DepartureTime, trip.Seats, trip.Description, trip.ImagePath);
@@ -54,7 +54,7 @@
         {
             if (!this.IsUserLoggedIn())
             {
-                return this.Redirect("/User/Login");
+                return this.Redirect("/Users/Login");
             }
 
             return this.View(this.tripsService.GetAll(), "All");

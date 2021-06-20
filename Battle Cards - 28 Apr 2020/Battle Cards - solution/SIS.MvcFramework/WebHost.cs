@@ -33,7 +33,7 @@ namespace SIS.MvcFramework
 
             logger.Log(string.Empty);
             logger.Log("Requests:");
-            var httpServer = new HttpServer(8080, routeTable, logger);
+            var httpServer = new HttpServer(3600, routeTable, logger);
             await httpServer.StartAsync();
         }
 

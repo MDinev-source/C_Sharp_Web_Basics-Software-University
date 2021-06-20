@@ -22,7 +22,6 @@
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(20)]
         public string Password { get; set; }
 
         public ICollection<UserCard> UserCards { get; set; }
