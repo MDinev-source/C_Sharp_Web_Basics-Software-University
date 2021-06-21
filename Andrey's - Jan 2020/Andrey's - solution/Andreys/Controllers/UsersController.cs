@@ -2,8 +2,10 @@
 {
     using Andreys.Services;
     using Andreys.ViewModels.Users;
+
     using SIS.HTTP;
     using SIS.MvcFramework;
+
     public class UsersController : Controller
     {
         private readonly IUsersService usersService;
@@ -12,6 +14,7 @@
         {
             this.usersService = usersService;
         }
+
         public HttpResponse Login()
         {
             if (this.IsUserLoggedIn())
@@ -51,30 +54,31 @@
         {
             if (input.Password.Length < 6 || input.Password.Length > 20)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (input.Username.Length < 4 || input.Username.Length > 10)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (input.Password != input.ConfirmPassword)
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (this.usersService.EmailExists(input.Email))
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             if (this.usersService.UsernameExists(input.Username))
             {
-                return this.Redirect("/Users/Register");
+                return this.View();
             }
 
             this.usersService.Register(input.Username, input.Email, input.Password);
+
             return this.Redirect("/Users/Login");
         }
 
@@ -86,6 +90,7 @@
             }
 
             this.SignOut();
+
             return this.Redirect("/");
         }
     }

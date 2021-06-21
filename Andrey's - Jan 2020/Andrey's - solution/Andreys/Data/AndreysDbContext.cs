@@ -5,15 +5,21 @@
 
     public class AndreysDbContext : DbContext
     {
+        public AndreysDbContext()
+        {
+
+        }
+
         public DbSet<User> Users { get; set; }
+
         public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.
+                UseSqlServer("Server=DESKTOP-2R59647\\SQLEXPRESS;Database=Anderys;Integrated Security=True");
 
-            optionsBuilder.UseSqlServer(DatabaseConfiguration.ConnectionString);
-         
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }

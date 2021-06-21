@@ -3,20 +3,21 @@
     using Andreys.Services;
     using Andreys.ViewModels.Products;
     using SIS.HTTP;
+
     using SIS.MvcFramework;
 
-    public class ProductsController:Controller
+    public class ProductsController : Controller
     {
         private readonly IProductsService productsService;
 
-        public ProductsController(IProductsService productService)
+        public ProductsController(IProductsService productsService)
         {
-            this.productsService = productService;
+            this.productsService = productsService;
         }
 
         public HttpResponse Add()
         {
-            if (this.IsUserLoggedIn())
+            if (!this.IsUserLoggedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -25,36 +26,27 @@
         }
 
         [HttpPost]
-        public HttpResponse Add (AddProductViewModel product)
+        public HttpResponse Add(ProductAddInputModel inputModel)
         {
             if (!this.IsUserLoggedIn())
             {
                 return this.Redirect("/Users/Login");
             }
 
-            if (product.Name.Length < 4 || product.Name.Length > 20)
+            if (inputModel.Name.Length < 4 || inputModel.Name.Length > 20)
             {
-                return this.Redirect("/Products/Add");
+                return this.View();
             }
 
-            if (product.Description.Length >= 10)
+            if (string.IsNullOrEmpty(inputModel.Description) ||  inputModel.Description.Length > 10)
             {
-                return this.Redirect("/Products/Add");
+                return this.View();
             }
 
-            if (product.Price < 0)
-            {
-                return this.Redirect("/Products/Add");
-            }
 
-            int id = this.productsService.Add(product.Name,
-             product.Description,
-             product.ImageUrl,
-             product.Price,
-             product.Category,
-             product.Gender);
+            var productId = this.productsService.Add(inputModel);
 
-            return this.Redirect($"/Products/Details?id={id}");
+            return this.Redirect($"/Products/Details?id={productId}");
         }
 
         public HttpResponse Details(int id)
@@ -64,8 +56,9 @@
                 return this.Redirect("/Users/Login");
             }
 
-            var product = this.productsService.GetProduct(id);
-            return this.View(product, "Details");
+            var product = this.productsService.GetById(id);
+
+            return this.View(product);
         }
 
         public HttpResponse Delete(int id)
@@ -76,6 +69,7 @@
             }
 
             this.productsService.DeleteById(id);
+
             return this.Redirect("/");
         }
     }

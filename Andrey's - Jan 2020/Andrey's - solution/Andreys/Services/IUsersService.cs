@@ -9,5 +9,7 @@
         bool UsernameExists(string username);
 
         bool EmailExists(string email);
+
+        string GetUsername(string id);
     }
 }

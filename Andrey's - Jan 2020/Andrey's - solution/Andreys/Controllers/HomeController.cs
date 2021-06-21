@@ -13,27 +13,22 @@
             this.productsService = productsService;
         }
 
+        [HttpGet("/")]
+        public HttpResponse IndexSlash()
+        {
+            return this.Index();
+        }
+
         public HttpResponse Index()
         { 
             if (this.IsUserLoggedIn())
             {
-                var products = this.productsService.GetAll();
-                return this.View(products, "Home");
+                var allProducts = productsService.GetAll();
+
+                return this.View(allProducts, "Home");
             }
 
             return this.View();
-        }
-
-        [HttpGet("/")]
-        public HttpResponse IndexSlash()
-        {
-            if (this.IsUserLoggedIn())
-            {
-                var products = this.productsService.GetAll();
-                return this.View(products, "Home");
-            }
-
-            return this.View("Index");
         }
     }
 }

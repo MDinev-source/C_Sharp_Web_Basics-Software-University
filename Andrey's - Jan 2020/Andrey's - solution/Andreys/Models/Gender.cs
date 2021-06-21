@@ -1,8 +1,8 @@
 ﻿namespace Andreys.Models
 {
-   public enum Gender
+    public enum Gender
     {
-        Male=1,
-        Female=2
+        Male = 1,
+        Female = 2
     }
 }

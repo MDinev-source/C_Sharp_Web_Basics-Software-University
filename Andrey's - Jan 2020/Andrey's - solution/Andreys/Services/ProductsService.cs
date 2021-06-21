@@ -1,71 +1,60 @@
 ﻿namespace Andreys.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using Andreys.Data;
     using Andreys.Models;
     using Andreys.ViewModels.Products;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class ProductsService : IProductsService
     {
-        private readonly AndreysDbContext db;
+        private readonly AndreysDbContext dbContext;
 
-        public ProductsService(AndreysDbContext db)
+        public ProductsService(AndreysDbContext dbContext)
         {
-            this.db = db;
+            this.dbContext = dbContext;
         }
-        public int Add(string name, string description, string imageUrl, decimal price, string category, string gender)
+
+        public int Add(ProductAddInputModel productAddInputModel)
         {
-            var product = new Product
+            var genderAsEnum = Enum.Parse<Gender>(productAddInputModel.Gender);
+            var categoryAsEnum = Enum.Parse<Category>(productAddInputModel.Category);
+
+            var product = new Product()
             {
-                Name = name,
-                Description = description,
-                ImageUrl = imageUrl,
-                Price = price,
-                Category = Enum.Parse<Category>(category),
-                Gender = Enum.Parse<Gender>(gender)
+                Name = productAddInputModel.Name,
+                Description = productAddInputModel.Description,
+                ImageUrl = productAddInputModel.ImageUrl,
+                Price = productAddInputModel.Price,
+                Gender = genderAsEnum,
+                Category = categoryAsEnum
             };
 
-            this.db.Products.Add(product);
-            db.SaveChanges();
+            this.dbContext.Products.Add(product);
+            this.dbContext.SaveChanges();
+
             return product.Id;
         }
 
+        public IEnumerable<Product> GetAll()
+            => this.dbContext.Products.Select(x => new Product 
+            { 
+                Id = x.Id,
+                Name = x.Name,
+                ImageUrl = x.ImageUrl,
+                Price = x.Price
+            })
+            .ToArray();
+
+        public Product GetById(int id)
+            => this.dbContext.Products.FirstOrDefault(x => x.Id == id);
+
         public void DeleteById(int id)
         {
-            var product = this.db.Products.Find(id);
-            this.db.Products.Remove(product);
-            this.db.SaveChanges();
-        }
-
-        public IEnumerable<ProductsHomeViewModel> GetAll()
-        {
-            return this.db.Products
-                 .Select(x => new ProductsHomeViewModel
-                 {
-                     Id=x.Id,
-                     Name=x.Name,
-                     Price=x.Price,
-                     ImageUrl=x.ImageUrl
-                 })
-                 .ToArray();
-        }
-
-        public ProductDetailsViewModel GetProduct(int id)
-        {
-            return this.db.Products
-                .Where(x => x.Id == id)
-                .Select(x => new ProductDetailsViewModel
-                {
-                    Id=x.Id,
-                    Name=x.Name,
-                    Price=x.Price,
-                    Description=x.Description,
-                    ImageUrl=x.ImageUrl,
-                    Category=x.Category.ToString(),
-                    Gender=x.Gender.ToString()
-                }).FirstOrDefault();
+            var product = this.GetById(id);
+            this.dbContext.Products.Remove(product);
+            this.dbContext.SaveChanges();
         }
     }
 }

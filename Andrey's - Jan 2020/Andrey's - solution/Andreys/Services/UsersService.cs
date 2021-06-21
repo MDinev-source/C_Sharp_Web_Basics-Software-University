@@ -2,6 +2,9 @@
 {
     using Andreys.Data;
     using Andreys.Models;
+
+    using SIS.MvcFramework;
+    using System;
     using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
@@ -9,10 +12,12 @@
     public class UsersService : IUsersService
     {
         private readonly AndreysDbContext db;
+
         public UsersService(AndreysDbContext db)
         {
             this.db = db;
         }
+
         public bool EmailExists(string email)
         {
             return this.db.Users.Any(x => x.Email == email);
@@ -21,9 +26,8 @@
         public string GetUserId(string username, string password)
         {
             var hashPassword = this.Hash(password);
-
-            var user = this.db.Users.FirstOrDefault(x => x.Username == username && x.Password == hashPassword);
-
+            var user = this.db.Users.FirstOrDefault(
+                u => u.Username == username && u.Password == hashPassword);
             if (user == null)
             {
                 return null;
@@ -32,13 +36,24 @@
             return user.Id;
         }
 
+        public string GetUsername(string id)
+        {
+            var username = this.db.Users
+                .Where(x => x.Id == id)
+                .Select(x => x.Username)
+                .FirstOrDefault();
+            return username;
+        }
+
         public void Register(string username, string email, string password)
         {
             var user = new User
             {
+                Id = Guid.NewGuid().ToString(),
+                Role = IdentityRole.User,
                 Username = username,
                 Email = email,
-                Password = this.Hash(password)
+                Password = this.Hash(password),
             };
 
             this.db.Users.Add(user);
@@ -47,7 +62,7 @@
 
         public bool UsernameExists(string username)
         {
-            return db.Users.Any(x => x.Username == username);
+            return this.db.Users.Any(x => x.Username == username);
         }
 
         private string Hash(string input)

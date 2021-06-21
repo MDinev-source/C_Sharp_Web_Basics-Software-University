@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.MvcFramework", "SIS.Mvc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.MvcFramework.Tests", "SIS.MvcFramework.Tests\SIS.MvcFramework.Tests.csproj", "{D225A8AF-CC18-4CC1-B3E3-369EAC5A8D1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Andreys", "Andreys\Andreys.csproj", "{5CACA621-C889-4EAF-887B-129B202B3953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Andreys", "Andreys\Andreys.csproj", "{1703D762-A1D9-4F9C-B3BA-F0F5F8C4407F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{D225A8AF-CC18-4CC1-B3E3-369EAC5A8D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D225A8AF-CC18-4CC1-B3E3-369EAC5A8D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D225A8AF-CC18-4CC1-B3E3-369EAC5A8D1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CACA621-C889-4EAF-887B-129B202B3953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CACA621-C889-4EAF-887B-129B202B3953}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CACA621-C889-4EAF-887B-129B202B3953}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CACA621-C889-4EAF-887B-129B202B3953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1703D762-A1D9-4F9C-B3BA-F0F5F8C4407F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1703D762-A1D9-4F9C-B3BA-F0F5F8C4407F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1703D762-A1D9-4F9C-B3BA-F0F5F8C4407F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1703D762-A1D9-4F9C-B3BA-F0F5F8C4407F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
