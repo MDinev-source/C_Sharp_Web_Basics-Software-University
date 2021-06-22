@@ -1,6 +1,5 @@
 ﻿namespace BattleCards.Data
 {
-    using BattleCards.Models;
     using Microsoft.EntityFrameworkCore;
 
     public class ApplicationDbContext : DbContext
@@ -12,14 +11,10 @@
             optionsBuilder.UseSqlServer(DatabaseConfiguration.ConnectionString);
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Card> Cards { get; set; }
-        public DbSet<UserCard> UserCards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UserCard>()
-                  .HasKey(k => new { k.CardId, k.UserId });
+
         }
     }
 }
