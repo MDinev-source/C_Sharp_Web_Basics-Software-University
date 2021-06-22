@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BattleCards.ViewModels.Users
+﻿namespace BattleCards.ViewModels.Users
 {
-    class LoginInputModels
+    public class LoginInputModel
     {
+        public string Username { get; set; }
+
+        public string Password { get; set; }
     }
 }

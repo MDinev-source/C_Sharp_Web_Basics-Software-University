@@ -91,9 +91,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="ViewModels\Cards\" />
-    <Folder Include="ViewModels\Users\" />
   </ItemGroup>
   
   <ItemGroup>
