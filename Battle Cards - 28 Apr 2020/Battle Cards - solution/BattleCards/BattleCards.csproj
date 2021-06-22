@@ -91,10 +91,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="ViewModels\Cards\" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <ProjectReference Include="..\SUS.MvcFramework\SUS.MvcFramework.csproj" />
   </ItemGroup>
 

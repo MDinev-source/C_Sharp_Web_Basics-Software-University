@@ -7,7 +7,7 @@
     using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
-    public class UsersService
+    public class UsersService:IUsersService
     {
         private readonly ApplicationDbContext db;
 
