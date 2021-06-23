@@ -4,6 +4,8 @@
     using BattleCards.ViewModels.Users;
     using SUS.HTTP;
     using SUS.MvcFramework;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text.RegularExpressions;
 
     public class UsersController : Controller
     {
@@ -14,6 +16,7 @@
             this.usersService = usersService;
         }
 
+        // GET /users/login
         public HttpResponse Login()
         {
             if (this.IsUserSignedIn())
@@ -25,19 +28,24 @@
         }
 
         [HttpPost]
-        public HttpResponse Login(LoginInputModel input)
+        public HttpResponse Login(string username, string password)
         {
-            var userId = this.usersService.GetUserId(input.Username, input.Password);
-
-            if (userId != null)
+            if (this.IsUserSignedIn())
             {
-                this.SignIn(userId);
                 return this.Redirect("/");
             }
 
-            return this.Redirect("/Users/Login");
+            var userId = this.usersService.GetUserId(username, password);
+            if (userId == null)
+            {
+                return this.Error("Invalid username or password");
+            }
+
+            this.SignIn(userId);
+            return this.Redirect("/Cards/All");
         }
 
+        // GET /users/register
         public HttpResponse Register()
         {
             if (this.IsUserSignedIn())
@@ -51,33 +59,47 @@
         [HttpPost]
         public HttpResponse Register(RegisterInputModel input)
         {
-            if (input.Password.Length < 6 || input.Password.Length > 20)
+            if (this.IsUserSignedIn())
             {
-                return this.View();
+                return this.Redirect("/");
             }
 
-            if (input.Username.Length < 5 || input.Username.Length > 20)
+            if (input.Username == null || input.Username.Length < 5 || input.Username.Length > 20)
             {
-                return this.View();
+                return this.Error("Invalid username. The username should be between 5 and 20 characters.");
+            }
+
+            if (!Regex.IsMatch(input.Username, @"^[a-zA-Z0-9\.]+$"))
+            {
+                return this.Error("Invalid username. Only alphanumeric characters are allowed.");
+            }
+
+            if (string.IsNullOrWhiteSpace(input.Email) || !new EmailAddressAttribute().IsValid(input.Email))
+            {
+                return this.Error("Invalid email.");
+            }
+
+            if (input.Password == null || input.Password.Length < 6 || input.Password.Length > 20)
+            {
+                return this.Error("Invalid password. The password should be between 6 and 20 characters.");
             }
 
             if (input.Password != input.ConfirmPassword)
             {
-                return this.View();
+                return this.Error("Passwords should be the same.");
             }
 
-            if (this.usersService.EmailExists(input.Email))
+            if (!this.usersService.IsUsernameAvailable(input.Username))
             {
-                return this.View();
+                return this.Error("Username already taken.");
             }
 
-            if (this.usersService.UsernameExists(input.Username))
+            if (!this.usersService.IsEmailAvailable(input.Email))
             {
-                return this.View();
+                return this.Error("Email already taken.");
             }
 
-            this.usersService.Register(input.Username, input.Email, input.Password);
-
+            this.usersService.CreateUser(input.Username, input.Email, input.Password);
             return this.Redirect("/Users/Login");
         }
 
@@ -85,11 +107,10 @@
         {
             if (!this.IsUserSignedIn())
             {
-                return this.Redirect("/Users/Login");
+                return this.Error("Only logged-in users can logout.");
             }
 
             this.SignOut();
-
             return this.Redirect("/");
         }
     }

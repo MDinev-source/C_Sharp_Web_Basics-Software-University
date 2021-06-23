@@ -4,12 +4,15 @@
     using System.Collections.Generic;
     public interface ICardsService
     {
-        int Create(AddCardInputModel card);
-        IEnumerable<CardsViewModel> GetAll();
-        IEnumerable<CardsViewModel> GetMyCollection(string id);
+        int AddCard(AddCardInputModel input);
 
-        void AddToMyCollection(int cardId, string userId);
-        void RemoveToMyCollection(int cardId, string userId);
+        IEnumerable<CardViewModel> GetAll();
+
+        IEnumerable<CardViewModel> GetByUserId(string userId);
+
+        void AddCardToUserCollection(string userId, int cardId);
+
+        void RemoveCardFromUserCollection(string userId, int cardId);
 
     }
 }

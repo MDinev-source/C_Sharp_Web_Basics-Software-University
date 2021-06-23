@@ -2,14 +2,12 @@
 {
    public interface IUsersService
     {
+        string CreateUser(string username, string email, string password);
+
+        bool IsEmailAvailable(string email);
+
         string GetUserId(string username, string password);
 
-        void Register(string username, string email, string password);
-
-        bool UsernameExists(string username);
-
-        bool EmailExists(string email);
-
-        string GetUsername(string id);
+        bool IsUsernameAvailable(string username);
     }
 }

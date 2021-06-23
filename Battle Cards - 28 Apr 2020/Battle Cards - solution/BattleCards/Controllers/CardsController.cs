@@ -16,9 +16,10 @@
             this.cardsService = cardsService;
         }
 
+        // GET /cards/add
         public HttpResponse Add()
         {
-            if (!IsUserSignedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -29,7 +30,7 @@
         [HttpPost]
         public HttpResponse Add(AddCardInputModel model)
         {
-            if (!IsUserSignedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -39,12 +40,12 @@
                 return this.Error("Name should be between 5 and 15 characters long.");
             }
 
-            if (string.IsNullOrWhiteSpace(model.ImageUrl))
+            if (string.IsNullOrWhiteSpace(model.Image))
             {
                 return this.Error("The image is required!");
             }
 
-            if (!Uri.TryCreate(model.ImageUrl, UriKind.Absolute, out _))
+            if (!Uri.TryCreate(model.Image, UriKind.Absolute, out _))
             {
                 return this.Error("Image url should be valid.");
             }
@@ -69,13 +70,13 @@
                 return this.Error("Description is required and its length should be at most 200 characters.");
             }
 
-            var cardId = this.cardsService.Create(model);
+            var cardId = this.cardsService.AddCard(model);
             var userId = this.GetUserId();
-            this.cardsService.AddToMyCollection(cardId, userId);
-
+            this.cardsService.AddCardToUserCollection(userId, cardId);
             return this.Redirect("/Cards/All");
         }
 
+        // /cards/all
         public HttpResponse All()
         {
             if (!this.IsUserSignedIn())
@@ -94,7 +95,7 @@
                 return this.Redirect("/Users/Login");
             }
 
-            var viewModel = this.cardsService.GetMyCollection(this.GetUserId());
+            var viewModel = this.cardsService.GetByUserId(this.GetUserId());
             return this.View(viewModel);
         }
 
@@ -106,7 +107,7 @@
             }
 
             var userId = this.GetUserId();
-            this.cardsService.AddToMyCollection(cardId, userId);
+            this.cardsService.AddCardToUserCollection(userId, cardId);
             return this.Redirect("/Cards/All");
         }
 
@@ -118,7 +119,7 @@
             }
 
             var userId = this.GetUserId();
-            this.cardsService.RemoveToMyCollection(cardId, userId);
+            this.cardsService.RemoveCardFromUserCollection(userId, cardId);
             return this.Redirect("/Cards/Collection");
         }
 

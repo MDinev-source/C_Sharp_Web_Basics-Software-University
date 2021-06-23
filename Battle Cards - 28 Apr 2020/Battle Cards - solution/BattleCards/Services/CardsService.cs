@@ -15,56 +15,52 @@
             this.db = db;
         }
 
-        public int Create(AddCardInputModel card)
+        public int AddCard(AddCardInputModel input)
         {
-            var dbCard = new Card
+            var card = new Card
             {
-                Name = card.Name,
-                ImageUrl = card.ImageUrl,
-                Keyword = card.Keyword,
-                Attack = card.Attack,
-                Health = card.Health,
-                Description = card.Description
+                Attack = input.Attack,
+                Health = input.Health,
+                Description = input.Description,
+                Name = input.Name,
+                ImageUrl = input.Image,
+                Keyword = input.Keyword,
             };
-
-            this.db.Cards.Add(dbCard);
+            this.db.Cards.Add(card);
             this.db.SaveChanges();
-            return dbCard.Id;
+            return card.Id;
         }
 
-        public IEnumerable<CardsViewModel> GetAll()
+        public IEnumerable<CardViewModel> GetAll()
         {
-            var cards = this.db.Cards.Select(x => new CardsViewModel
+            return this.db.Cards.Select(x => new CardViewModel
             {
+                Id = x.Id,
                 Name = x.Name,
-                ImageUrl = x.ImageUrl,
-                Keyword = x.Keyword,
+                Description = x.Description,
                 Attack = x.Attack,
                 Health = x.Health,
-                Description = x.Description
+                ImageUrl = x.ImageUrl,
+                Type = x.Keyword,
             }).ToList();
-
-            return cards;
         }
 
-        public IEnumerable<CardsViewModel> GetMyCollection(string id)
+        public IEnumerable<CardViewModel> GetByUserId(string userId)
         {
-            var myCards = this.db.UserCards.Where(x => x.UserId == id)
-               .Select(x => new CardsViewModel
-               {
-                   Attack = x.Card.Attack,
-                   Description = x.Card.Description,
-                   Health = x.Card.Health,
-                   ImageUrl = x.Card.ImageUrl,
-                   Name = x.Card.Name,
-                   Keyword = x.Card.Keyword,
-                   Id = x.CardId,
-               }).ToList();
-
-            return myCards;
+            return this.db.UserCards.Where(x => x.UserId == userId)
+                .Select(x => new CardViewModel
+                {
+                    Attack = x.Card.Attack,
+                    Description = x.Card.Description,
+                    Health = x.Card.Health,
+                    ImageUrl = x.Card.ImageUrl,
+                    Name = x.Card.Name,
+                    Type = x.Card.Keyword,
+                    Id = x.CardId,
+                }).ToList();
         }
 
-        public void AddToMyCollection(int cardId, string userId)
+        public void AddCardToUserCollection(string userId, int cardId)
         {
             if (this.db.UserCards.Any(x => x.UserId == userId && x.CardId == cardId))
             {
@@ -74,16 +70,14 @@
             this.db.UserCards.Add(new UserCard
             {
                 CardId = cardId,
-                UserId = userId
+                UserId = userId,
             });
-
             this.db.SaveChanges();
         }
 
-        public void RemoveToMyCollection(int cardId, string userId)
+        public void RemoveCardFromUserCollection(string userId, int cardId)
         {
             var userCard = this.db.UserCards.FirstOrDefault(x => x.UserId == userId && x.CardId == cardId);
-
             if (userCard == null)
             {
                 return;
