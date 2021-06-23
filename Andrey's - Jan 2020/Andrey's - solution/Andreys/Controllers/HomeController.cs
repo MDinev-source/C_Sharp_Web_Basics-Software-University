@@ -1,8 +1,8 @@
 ﻿namespace Andreys.App.Controllers
 {
     using Andreys.Services;
-    using SIS.HTTP;
-    using SIS.MvcFramework;
+    using SUS.HTTP;
+    using SUS.MvcFramework;
 
     public class HomeController : Controller
     {
@@ -20,8 +20,8 @@
         }
 
         public HttpResponse Index()
-        { 
-            if (this.IsUserLoggedIn())
+        {
+            if (this.IsUserSignedIn())
             {
                 var allProducts = productsService.GetAll();
 

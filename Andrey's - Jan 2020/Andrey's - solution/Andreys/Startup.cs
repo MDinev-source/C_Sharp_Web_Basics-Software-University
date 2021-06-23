@@ -4,13 +4,14 @@
 
     using Data;
 
-    using SIS.MvcFramework;
-    using SIS.HTTP;
+    using SUS.MvcFramework;
+    using SUS.HTTP;
     using Andreys.Services;
 
     public class Startup : IMvcApplication
     {
-        public void Configure(IList<Route> serverRoutingTable)
+ 
+        public void Configure(List<Route> routeTable)
         {
             using (var db = new AndreysDbContext())
             {

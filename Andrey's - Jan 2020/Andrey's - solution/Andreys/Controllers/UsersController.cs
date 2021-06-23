@@ -3,8 +3,8 @@
     using Andreys.Services;
     using Andreys.ViewModels.Users;
 
-    using SIS.HTTP;
-    using SIS.MvcFramework;
+    using SUS.HTTP;
+    using SUS.MvcFramework;
 
     public class UsersController : Controller
     {
@@ -17,7 +17,7 @@
 
         public HttpResponse Login()
         {
-            if (this.IsUserLoggedIn())
+            if (this.IsUserSignedIn())
             {
                 return this.Redirect("/");
             }
@@ -41,7 +41,7 @@
 
         public HttpResponse Register()
         {
-            if (this.IsUserLoggedIn())
+            if (this.IsUserSignedIn())
             {
                 return this.Redirect("/");
             }
@@ -84,7 +84,7 @@
 
         public HttpResponse Logout()
         {
-            if (!this.IsUserLoggedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }

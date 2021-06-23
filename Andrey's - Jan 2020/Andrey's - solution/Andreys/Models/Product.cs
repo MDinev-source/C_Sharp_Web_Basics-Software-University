@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Andreys.Models
+﻿namespace Andreys.Models
 {
+    using System.ComponentModel.DataAnnotations;
     public class Product
     {
         //•	Has a Name – a string with min length 4 and max length 20 (inclusive) (required)

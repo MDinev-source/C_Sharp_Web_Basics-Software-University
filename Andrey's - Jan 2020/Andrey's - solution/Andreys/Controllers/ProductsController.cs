@@ -2,9 +2,8 @@
 {
     using Andreys.Services;
     using Andreys.ViewModels.Products;
-    using SIS.HTTP;
-
-    using SIS.MvcFramework;
+    using SUS.HTTP;
+    using SUS.MvcFramework;
 
     public class ProductsController : Controller
     {
@@ -17,7 +16,7 @@
 
         public HttpResponse Add()
         {
-            if (!this.IsUserLoggedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -28,7 +27,7 @@
         [HttpPost]
         public HttpResponse Add(ProductAddInputModel inputModel)
         {
-            if (!this.IsUserLoggedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -51,7 +50,7 @@
 
         public HttpResponse Details(int id)
         {
-            if (!this.IsUserLoggedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
@@ -63,7 +62,7 @@
 
         public HttpResponse Delete(int id)
         {
-            if (!this.IsUserLoggedIn())
+            if (!this.IsUserSignedIn())
             {
                 return this.Redirect("/Users/Login");
             }
