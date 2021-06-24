@@ -8,6 +8,8 @@
 
         bool IsUsernameAvailable(string username);
 
+        bool IsEmailAvailable(string email);
+
         public bool IsUserMechanic(string Userid);
     }
 }

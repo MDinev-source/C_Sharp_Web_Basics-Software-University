@@ -41,9 +41,15 @@
             return this.db.Users.Any(x => x.Id == Userid && x.IsMechanic);
         }
 
+
+        public bool IsEmailAvailable(string email)
+        {
+            return !this.db.Users.Any(x => x.Email == email);
+        }
+
         public bool IsUsernameAvailable(string username)
         {
-            return this.db.Users.Any(x => x.Username == username);
+            return !this.db.Users.Any(x => x.Username == username);
         }
 
         private static string ComputeHash(string input)
