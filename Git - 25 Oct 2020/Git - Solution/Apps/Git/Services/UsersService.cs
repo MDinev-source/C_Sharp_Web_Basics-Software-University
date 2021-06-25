@@ -33,7 +33,7 @@
             var user = this.db.Users
                 .FirstOrDefault(x => x.Username == username && x.Password == hashPassword);
 
-            return user.Id;
+            return user?.Id;
         }
 
         public bool IsEmailAvailable(string email)

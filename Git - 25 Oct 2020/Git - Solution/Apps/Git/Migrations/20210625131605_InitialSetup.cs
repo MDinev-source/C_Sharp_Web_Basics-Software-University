@@ -50,8 +50,7 @@ namespace Git.Migrations
                     Id = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: false),
                     CreatedOn = table.Column<DateTime>(nullable: false),
-                    CreateorId = table.Column<string>(nullable: false),
-                    CreatorId = table.Column<string>(nullable: true),
+                    CreatorId = table.Column<string>(nullable: false),
                     RepositoryId = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -62,13 +61,13 @@ namespace Git.Migrations
                         column: x => x.CreatorId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Commits_Repositories_RepositoryId",
                         column: x => x.RepositoryId,
                         principalTable: "Repositories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

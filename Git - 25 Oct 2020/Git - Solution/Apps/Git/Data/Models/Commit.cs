@@ -17,7 +17,7 @@
         public DateTime CreatedOn { get; set; }
 
         [Required]
-        public string CreateorId { get; set; }
+        public string CreatorId { get; set; }
 
         public User Creator { get; set; }
 

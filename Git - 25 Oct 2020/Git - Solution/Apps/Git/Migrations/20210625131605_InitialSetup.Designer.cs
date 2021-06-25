@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Git.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210625081613_InitialSetup")]
+    [Migration("20210625131605_InitialSetup")]
     partial class InitialSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,11 +29,8 @@ namespace Git.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CreateorId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("CreatorId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
@@ -110,12 +107,14 @@ namespace Git.Migrations
                 {
                     b.HasOne("Git.Data.Models.User", "Creator")
                         .WithMany("Commits")
-                        .HasForeignKey("CreatorId");
+                        .HasForeignKey("CreatorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Git.Data.Models.Repository", "Repository")
                         .WithMany("Commits")
                         .HasForeignKey("RepositoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

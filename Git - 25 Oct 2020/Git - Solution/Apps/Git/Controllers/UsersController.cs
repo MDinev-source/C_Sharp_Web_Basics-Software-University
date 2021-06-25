@@ -40,7 +40,7 @@
                 return this.Error("Invalid username or password.");
             }
 
-
+            this.SignIn(userId);
             return this.Redirect("/Repositories/All");
         }
 
