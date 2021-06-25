@@ -1,32 +1,68 @@
 ﻿using CarShop.Data;
-
+using CarShop.Data.Models;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace CarShop.Services
 {
-    public class UsersService: IUsersService
+    public class UsersService : IUsersService
     {
+        private readonly ApplicationDbContext db;
 
+        public UsersService(ApplicationDbContext db)
+        {
+            this.db = db;
+        }
         public void Create(string username, string email, string password, string userType)
         {
-            throw new System.NotImplementedException();
+            var user = new User
+            {
+                Username = username,
+                Email = email,
+                Password = ComputeHash(password),
+                IsMechanic = userType == "Mechanic" ? true : false
+            };
+
+            this.db.Users.Add(user);
+            this.db.SaveChanges();
         }
 
         public string GetUserId(string username, string password)
         {
-            throw new System.NotImplementedException();
+            var user = this.db.Users
+                .FirstOrDefault(x => x.Username == username && x.Password == password);
+
+            return user?.Id;
         }
 
         public bool IsUserMechanic(string Userid)
         {
-            throw new System.NotImplementedException();
+            return this.db.Users.Any(x => x.Id == Userid && x.IsMechanic);
+        }
+
+        public bool IsEmailAvailable(string email)
+        {
+            return this.db.Users.Any(x => x.Email == email);
         }
 
         public bool IsUsernameAvailable(string username)
         {
-            throw new System.NotImplementedException();
+            return this.db.Users.Any(x => x.Username == username);
+        }
+        private static string ComputeHash(string input)
+        {
+            var bytes = Encoding.UTF8.GetBytes(input);
+            using var hash = SHA512.Create();
+            var hashedInputBytes = hash.ComputeHash(bytes);
+            var hashedInputStringBuilder = new StringBuilder(128);
+
+            foreach (var b in hashedInputBytes)
+            {
+                hashedInputStringBuilder.Append(b.ToString("X2"));
+            }
+
+            return hashedInputStringBuilder.ToString();
         }
     }
 }
