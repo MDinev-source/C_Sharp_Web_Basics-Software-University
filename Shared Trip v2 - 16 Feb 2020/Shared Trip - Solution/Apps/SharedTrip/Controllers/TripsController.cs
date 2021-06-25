@@ -65,14 +65,37 @@
                 return this.Error("Description is required and has max length of 80.");
             }
 
-            if (!DateTime.TryParseExact(input.DepartureTime, "dd.MM.yyyy HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
-            {
-                return this.Error("Invalid departure time. Please use dd.MM.yyyy HH:mm");
-            }
-
             this.tripsService.Add(input);
 
             return this.Redirect("/Trips/All");
+        }
+
+        public HttpResponse Details(string tripId)
+        {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            return this.View(this.tripsService.TripDetails(tripId));
+        }
+
+        public HttpResponse AddUserToTrip(string tripId)
+        {
+            if (!this.IsUserSignedIn())
+            {
+                return this.Redirect("/Users/Login");
+            }
+
+            var userId = this.GetUserId();
+            var isAdded = this.tripsService.AddUserToTrip(tripId, userId);
+
+            if (isAdded)
+            {
+                return this.Redirect("/Trips/All");
+            }
+
+            return this.Redirect($"/Trips/Details?tripId={tripId}");
         }
     }
 }
