@@ -28,9 +28,12 @@
 
         public string GetUserId(string username, string password)
         {
-            return this.db.Users
-                .FirstOrDefault(x => x.Username == username && x.Password == password)
-                .Id;
+            var hashPassword = ComputeHash(password);
+
+            var user = this.db.Users
+                .FirstOrDefault(x => x.Username == username && x.Password == hashPassword);
+
+            return user.Id;
         }
 
         public bool IsEmailAvailable(string email)
