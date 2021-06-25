@@ -31,7 +31,7 @@ namespace CarShop.Services
         public string GetUserId(string username, string password)
         {
             var user = this.db.Users
-                .FirstOrDefault(x => x.Username == username && x.Password == password);
+                .FirstOrDefault(x => x.Username == username && x.Password == ComputeHash (password));
 
             return user?.Id;
         }
